@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #172033;
+    line-height: 1.6;
+}
+
+/* =========================
+   2. NAVIGATION BAR
+========================= */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #edf0f5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #172033;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #3563e9;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #566176;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3563e9;
+}
+
+.nav-btn {
+    background: #3563e9;
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #244bc0;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    max-width: 1200px;
+    min-height: 600px;
+    margin: auto;
+    padding: 100px 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tag {
+    background: #edf2ff;
+    color: #3563e9;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 9vw, 105px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -5px;
+    color: #172033;
+}
+
+.hero h1 span {
+    color: #3563e9;
+}
+
+.description {
+    margin-top: 25px;
+    color: #69758a;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.main-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 25px;
+
+    background: #3563e9;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: #244bc0;
+    transform: translateY(-3px);
+}
+
+.event-info {
+    margin-top: 45px;
+    color: #8a94a6;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+/* =========================
+   4. CONTENT SECTIONS
+========================= */
+
+section:not(.hero) {
+    padding: 85px 35px;
+    text-align: center;
+    border-top: 1px solid #edf0f5;
+}
+
+section h2 {
+    color: #172033;
+    font-size: 36px;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+section p {
+    color: #69758a;
+}
+
+/* =========================
+   5. REGISTRATION
+========================= */
+
+#register a {
+    display: inline-block;
+    margin-top: 20px;
+    background: #3563e9;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+/* =========================
+   6. FOOTER
+========================= */
+
+footer {
+    background: #f7f8fb;
+    color: #69758a;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 13px;
+}
+
+/* =========================
+   7. MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-btn {
+        padding: 9px 14px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 80px 22px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    section:not(.hero) {
+        padding: 65px 20px;
+    }
+
+    section h2 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+}
